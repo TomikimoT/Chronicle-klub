@@ -18,8 +18,8 @@ export async function login(prevState: any, formData: FormData) {
     return { error: error.message }
   }
 
-  revalidatePath('/', 'layout')
-  redirect('/')
+  revalidatePath('/calendar', 'layout')
+  redirect('/calendar')
 }
 
 export async function signup(prevState: any, formData: FormData) {
@@ -36,8 +36,8 @@ export async function signup(prevState: any, formData: FormData) {
     return { error: error.message }
   }
 
-  revalidatePath('/', 'layout')
-  redirect('/')
+  revalidatePath('/calendar', 'layout')
+  redirect('/calendar')
 }
 
 export async function logout() {

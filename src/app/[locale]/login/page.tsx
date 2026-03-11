@@ -30,7 +30,7 @@ export default function LoginPage() {
               Enter your email and password to log in.
             </CardDescription>
           </CardHeader>
-          <CardContent className="grid gap-4">
+          <CardContent className="grid gap-4 pb-8">
             {state?.error && (
               <div className="text-sm text-destructive">{state.error}</div>
             )}

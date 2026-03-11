@@ -1,0 +1,17 @@
+{
+  "Index": {
+    "title": "Vítejte v Chronicle",
+    "description": "Organizujte svá TTRPG dobrodružství"
+  },
+  "Auth": {
+    "signIn": "Přihlásit se",
+    "signUp": "Registrovat",
+    "email": "E-mail",
+    "password": "Heslo"
+  },
+  "Navigation": {
+    "home": "Domů",
+    "calendar": "Kalendář",
+    "profile": "Profil"
+  }
+}

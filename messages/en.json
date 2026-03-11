@@ -1,0 +1,17 @@
+{
+  "Index": {
+    "title": "Welcome to Chronicle",
+    "description": "Organize your TTRPG adventures"
+  },
+  "Auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password"
+  },
+  "Navigation": {
+    "home": "Home",
+    "calendar": "Calendar",
+    "profile": "Profile"
+  }
+}

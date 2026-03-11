@@ -68,7 +68,6 @@ export default function ProfilePage() {
     const display_name = formData.get('display_name') as string
     const bio = formData.get('bio') as string
     const receive_emails = formData.get('receive_emails') === 'on'
-    const custom_color = formData.get('custom_theme_color') as string
 
     let avatar_url = profile?.avatar_url
 
@@ -95,13 +94,12 @@ export default function ProfilePage() {
         display_name,
         bio,
         receive_emails,
-        custom_theme_color: custom_color,
         avatar_url,
         updated_at: new Date().toISOString()
       })
       .eq('id', user.id)
 
-    setProfile({ ...profile, avatar_url, display_name, bio, receive_emails, custom_theme_color: custom_color })
+    setProfile({ ...profile, avatar_url, display_name, bio, receive_emails })
     setSaving(false)
     setSaved(true)
     
@@ -159,17 +157,6 @@ export default function ProfilePage() {
                 defaultValue={profile?.bio || ''} 
                 placeholder="Tell us about your campaigns and characters..."
               />
-            </div>
-
-            <div className="bg-muted/30 p-5 rounded-lg border space-y-4">
-              <Label htmlFor="custom_theme_color" className="text-lg font-bold">Personal Soul Theme</Label>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                When you activate the <strong>"Personal Soul"</strong> theme in the top navigation menu, the entire application will adapt to your chosen color.
-              </p>
-              <div className="flex items-center gap-4 pt-2">
-                <Input id="custom_theme_color" name="custom_theme_color" type="color" className="w-16 h-12 p-1 cursor-pointer" defaultValue={profile?.custom_theme_color || '#d4af37'} />
-                <span className="text-sm font-medium">Pick your primary color</span>
-              </div>
             </div>
 
             <div className="flex items-center justify-between rounded-lg border p-5 border-border">

@@ -35,10 +35,6 @@ export function ThemeSwitcher() {
           <Moon className="mr-2 h-4 w-4" />
           <span>Void (Dark)</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('theme-personal-soul')}>
-          <Palette className="mr-2 h-4 w-4" />
-          <span>Personal Soul (Custom)</span>
-        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )

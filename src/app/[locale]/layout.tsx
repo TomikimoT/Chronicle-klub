@@ -3,7 +3,6 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { ThemeProvider } from '@/components/theme-provider';
-import { PersonalSoulProvider } from '@/components/personal-soul-provider';
 import { Navbar } from '@/components/navbar';
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
@@ -49,14 +48,12 @@ export default async function LocaleLayout({
             attribute="class" 
             defaultTheme="theme-parchment" 
             enableSystem={false}
-            themes={['theme-parchment', 'theme-void', 'theme-personal-soul']}
+            themes={['theme-parchment', 'theme-void']}
           >
-            <PersonalSoulProvider>
-              <div className="relative flex min-h-screen flex-col">
-                <Navbar />
-                <main className="flex-1">{children}</main>
-              </div>
-            </PersonalSoulProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <Navbar />
+              <main className="flex-1">{children}</main>
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
